@@ -54,18 +54,65 @@ body{
     gap: 1vh;
 
 }
+@font-face {
+    font-family: digital-7;
+    src: url("digital-7.regular.ttf");
+}
 
 .display{
+    padding: 1vh;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
     text-align: center;
+
     background-color: #9ec6b8;
     border-radius: 30px;
     border: 10px solid black;
-    flex-grow: 1;
+
+
+    justify-content: center;
+    font-family: digital-7;
+    
+}
+
+.mini-display{
+    flex: 1;
+    border-bottom:2px solid #6c887d ;
+    font-size: large;
+    
+}
+
+/**/
+.mini-display span {
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.mini-display span.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* prueba */
+.big-display{
+    flex: 3;
+    letter-spacing: 0.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xxx-large;
+    font-weight: bold;
+    
 }
 
 .buttons{
 
-    flex-grow: 4;
+    height: 600px;
     display: flex;
     flex-direction: column;
     gap: 1vh;
@@ -87,6 +134,11 @@ body{
     font-size: xx-large;
 }
 
+.button:active {
+    background: linear-gradient(to bottom, #f6e2bb, #c2ad87);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transform:translate(3px, 3px);
+}
 
 /*FOOTER*/
 
@@ -98,4 +150,29 @@ body{
     justify-content: center;
     height: 5vh;
     margin-top: auto;
+}
+
+
+/**** media q */
+@media screen and (max-width: 600px) {
+    .header{
+        text-wrap: nowrap;
+        height: 8vh;
+
+    }
+
+    .header h1{
+        font-size: larger;
+    }
+
+
+
+    .calculator{
+        
+        width: 300px;
+        height: 500px;
+    
+    }
+
+
 }
