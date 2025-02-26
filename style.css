@@ -54,10 +54,6 @@ body{
     gap: 1vh;
 
 }
-@font-face {
-    font-family: digital-7;
-    src: url("digital-7.regular.ttf");
-}
 
 .display{
     padding: 1vh;
@@ -73,7 +69,7 @@ body{
 
 
     justify-content: center;
-    font-family: digital-7;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     
 }
 
